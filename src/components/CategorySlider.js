@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { useMediaQuery } from 'react-responsive';
 
@@ -6,8 +6,8 @@ import {
   CarouselProvider,
   Slider,
   Slide,
-  DotGroup,
-  Image,
+  // DotGroup,
+  // Image,
   ButtonBack,
   ButtonNext,
 } from 'pure-react-carousel';
@@ -22,7 +22,7 @@ export default function CategorySlider({ data }) {
     <div className=" overflow-hidden mb-4 bg-pink-400 rounded text-gray-100 p-2">
       <div className=" flex justify-between items-center mb-1 ">
         <h1 className="sub__titles ">Categories</h1>
-        <a href="#">See all</a>
+        <span>See all</span>
       </div>
 
       <CarouselProvider

@@ -1,24 +1,24 @@
 import React from 'react';
-import small from '../assets/small.jpg';
-import medium from '../assets/medium.jpg';
-import large from '../assets/2.png';
+// import small from '../assets/small.jpg';
+// import medium from '../assets/medium.jpg';
+// import large from '../assets/2.png';
 import {
   CarouselProvider,
   Slider,
   Slide,
   ButtonBack,
   ButtonNext,
-  Dot,
-  Image,
-  ImageWithZoom,
+  // Dot,
+  // Image,
+  // ImageWithZoom,
 } from 'pure-react-carousel';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
-import { useMediaQuery } from 'react-responsive';
-import { DataProvider } from '../contexts/DataContext';
+// import { useMediaQuery } from 'react-responsive';
+// import { DataProvider } from '../contexts/DataContext';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 export default function MainCarousel({ data }) {
-  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
+  // const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
   return (
     <div className="relative mb-4 overflow-hidden">
       <CarouselProvider

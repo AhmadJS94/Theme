@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { DataProvider } from '../contexts/DataContext';
+// import { DataProvider } from '../contexts/DataContext';
 import { useMediaQuery } from 'react-responsive';
 
 import {
   CarouselProvider,
   Slider,
   Slide,
-  DotGroup,
+  // DotGroup,
   Image,
   ButtonBack,
   ButtonNext,
@@ -23,7 +23,7 @@ export default function Slides({ data, settings }) {
     <div className="mb-4 bg-cadet-blue rounded text-gray-100 p-2">
       <div className=" flex justify-between items-center mb-2 ">
         <h1 className="sub__titles ">Our Products</h1>
-        <a href="#">See all</a>
+        <span>See all</span>
       </div>
       <CarouselProvider
         naturalSlideWidth={400}
