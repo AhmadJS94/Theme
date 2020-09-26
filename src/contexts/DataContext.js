@@ -6,6 +6,16 @@ import photo4 from '../assets/4.gif';
 import photo5 from '../assets/5.png';
 import photo6 from '../assets/6.gif';
 import photo7 from '../assets/7.png';
+import appliancelg from '../assets/topDeals/appliancelg.png';
+import appliancesm from '../assets/topDeals/appliancesm.png';
+import beverages from '../assets/topDeals/beverages.png';
+import care from '../assets/topDeals/care.png';
+import cooking from '../assets/topDeals/cooking.png';
+import food from '../assets/topDeals/food.png';
+import homecare from '../assets/topDeals/homecare.png';
+import laundry from '../assets/topDeals/laundry.png';
+import mattress from '../assets/topDeals/mattress.jpg';
+
 export const DataProvider = createContext();
 export default function DataContext({ children }) {
   const data = [
@@ -181,8 +191,19 @@ export default function DataContext({ children }) {
       price: '48',
     },
   ];
+  const topDeals = [
+    { url: appliancelg },
+    { url: appliancesm },
+    { url: beverages },
+    { url: care },
+    { url: cooking },
+    { url: food },
+    { url: homecare },
+    { url: laundry },
+    { url: mattress },
+  ];
   return (
-    <DataProvider.Provider value={{ data, fashionData, categories }}>
+    <DataProvider.Provider value={{ data, fashionData, categories, topDeals }}>
       {children}
     </DataProvider.Provider>
   );

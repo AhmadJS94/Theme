@@ -45,6 +45,7 @@
     "autoprefixer": "9",
     "postcss-cli": "^8.0.0",
     "tailwindcss": "^1.8.10",
-    "tailwindcss-blend-mode": "^1.0.0"
+    "tailwindcss-blend-mode": "^1.0.0",
+    "tailwindcss-textshadow": "^2.1.3"
   }
 }

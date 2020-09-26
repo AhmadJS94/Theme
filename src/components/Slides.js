@@ -12,8 +12,9 @@ import {
   ButtonBack,
   ButtonNext,
 } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import LazyLoad from 'react-lazyload';
 
 export default function Slides({ data, settings }) {
   const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
@@ -41,30 +42,32 @@ export default function Slides({ data, settings }) {
             return (
               <Slide key={i} innerClassName="px-4 ">
                 <div key={photo.url} className="flex-column  cursor-pointer ">
-                  <div className={`h-${settings.height} relative`}>
-                    <Image
-                      // style={{ pointerEvents: 'none' }}
-                      className="object-cover w-full mb-2 rounded pointer-events-none"
-                      src={photo.url}
-                      alt="me"
-                      hasMasterSpinner
-                    />
-                    <div className="bg-orange-400 text-blue-100 absolute top-2 right-2 rounded-full p-1 text-xs font-bold uppercase ">
-                      <span>50% off</span>
+                  <LazyLoad>
+                    <div className={`h-${settings.height} relative`}>
+                      <Image
+                        // style={{ pointerEvents: 'none' }}
+                        className="object-cover w-full mb-2 rounded pointer-events-none"
+                        src={photo.url}
+                        alt="me"
+                        hasMasterSpinner
+                      />
+                      <div className="bg-orange-400 text-blue-100 absolute top-2 right-2 rounded-full p-1 text-xs font-bold uppercase ">
+                        <span>50% off</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex-column">
-                    <h6 className="text-lg mb-0">{photo.title}</h6>
-                    <p className="mb-0 whitespace-no-wrap truncate text-sm">
-                      {photo.description}
-                    </p>
-                    <p className="mb-0">
-                      <span className="text-base font-medium">
-                        {photo.price}{' '}
-                      </span>
-                      <span className="text-xs font-light">KD</span>
-                    </p>
-                  </div>
+                    <div className="flex-column">
+                      <h6 className="text-lg mb-0">{photo.title}</h6>
+                      <p className="mb-0 whitespace-no-wrap truncate text-sm">
+                        {photo.description}
+                      </p>
+                      <p className="mb-0">
+                        <span className="text-base font-medium">
+                          {photo.price}{' '}
+                        </span>
+                        <span className="text-xs font-light">KD</span>
+                      </p>
+                    </div>
+                  </LazyLoad>
                 </div>
               </Slide>
             );

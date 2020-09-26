@@ -11,9 +11,13 @@ module.exports = {
       },
       fontFamily: {
         body: ['Nunito'],
+        cairo: ['Cairo'],
       },
       colors: {
         'cadet-blue': '#5F9EA0',
+        'nav-primary': '#ed8936',
+        'nav-secondary': '#fff',
+        teal: '#008080 ',
       },
       spacing: {
         '1p': '1px',
@@ -21,6 +25,10 @@ module.exports = {
         '3p': '3px',
         '4p': '4px',
         '5p': '5px',
+        '20p': '20px',
+        '25p': '25px',
+        '30p': '30px',
+        '35p': '35px',
       },
       inset: {
         '1/2': '50%',
@@ -32,6 +40,7 @@ module.exports = {
         n1: '-1px',
         1: '1px',
         50: '50px',
+        100: '100%',
       },
       translate: {
         'n1/2': '-50%',
@@ -39,9 +48,22 @@ module.exports = {
       minWidth: {
         700: '700px',
         135: '135px',
+        '50p': '50%',
+        '75p': '75%',
       },
       minHeight: {
         243: '243px',
+      },
+      zIndex: {
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
       },
     },
   },
@@ -50,5 +72,5 @@ module.exports = {
     backgroundBlendMode: ['responsive'],
     isolation: ['responsive'],
   },
-  plugins: [require('tailwindcss-blend-mode')()],
+  plugins: [require('tailwindcss-textshadow')],
 };

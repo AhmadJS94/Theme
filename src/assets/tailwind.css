@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
 .carousel-arrow-left {
-  @apply absolute w-8 h-20 top-1/2 left-n2 transform translate-y-n1/2 cursor-pointer bg-white px-2 py-2 bg-opacity-25 rounded z-50 transition duration-200 flex items-center;
+  @apply absolute w-8 h-20 top-1/2 left-n2 transform translate-y-n1/2 cursor-pointer bg-white px-2 py-2 bg-opacity-25 rounded z-1 transition duration-200 flex items-center;
 }
 .carousel-arrow-left:hover {
   @apply bg-opacity-75;
 }
 .carousel-arrow-right {
-  @apply absolute w-8 h-20 top-1/2 right-n2  transform translate-y-n1/2 cursor-pointer rounded px-2 py-2 bg-white bg-opacity-25 z-50 transition duration-200 flex items-center;
+  @apply absolute w-8 h-20 top-1/2 right-n2  transform translate-y-n1/2 cursor-pointer rounded px-2 py-2 bg-white bg-opacity-25 z-1 transition duration-200 flex items-center;
 }
 .carousel-arrow-right:hover {
   @apply bg-opacity-75;
 }
 .category-arrow-left {
-  @apply absolute w-6 h-16 top-36p left-0 transform translate-y-n1/2 cursor-pointer bg-white px-2 py-2 bg-opacity-25 rounded z-50 transition duration-200 flex items-center;
+  @apply absolute w-6 h-16 top-36p left-0 transform translate-y-n1/2 cursor-pointer bg-white px-2 py-2 bg-opacity-25 rounded z-1 transition duration-200 flex items-center;
 }
 .category-arrow-left:hover {
   @apply bg-opacity-75;
 }
 .category-arrow-right {
-  @apply absolute w-6 h-16 top-36p right-0 transform translate-y-n1/2 cursor-pointer rounded px-2 py-2 bg-white bg-opacity-25 z-50 transition duration-200 flex items-center;
+  @apply absolute w-6 h-16 top-36p right-0 transform translate-y-n1/2 cursor-pointer rounded px-2 py-2 bg-white bg-opacity-25 z-1 transition duration-200 flex items-center;
 }
 .category-arrow-right:hover {
   @apply bg-opacity-75;
@@ -33,6 +33,13 @@
 }
 .category__titles {
   @apply text-base text-center;
+}
+
+.nav-cat__item {
+  @apply py-2 px-5 transition duration-200 rounded-sm;
+}
+.nav-cat__item:hover {
+  @apply text-nav-primary bg-nav-secondary;
 }
 @screen xs {
   .sub__titles {
