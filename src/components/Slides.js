@@ -22,7 +22,9 @@ export default function Slides({ data, settings }) {
     <div className="mb-4 rounded  ">
       <div className=" flex py-2 justify-between items-center  ">
         <h1 className="sub__titles ">Our Products</h1>
-        <span>See all</span>
+        <button className="outline-none bg-nav-primary py-1 px-2 rounded text-white">
+          See all
+        </button>
       </div>
       <CarouselProvider
         naturalSlideWidth={400}

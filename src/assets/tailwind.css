@@ -42,15 +42,14 @@
   @apply text-nav-primary bg-nav-secondary;
 }
 @screen xs {
-  .sub__titles {
-    @apply text-2xl;
-  }
-
   .category__titles {
     @apply text-base;
   }
 }
 @screen md {
+  .sub__titles {
+    @apply text-2xl;
+  }
 }
 @screen lg {
   .category__titles {

@@ -20623,16 +20623,15 @@ video {
 }
 
 @media (min-width: 320px) {
-  .sub__titles {
-    font-size: 1.5rem;
-  }
-
   .category__titles {
     font-size: 1rem;
   }
 }
 
 @media (min-width: 768px) {
+  .sub__titles {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
