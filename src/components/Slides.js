@@ -19,8 +19,8 @@ export default function Slides({ data, settings }) {
   const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
   const isMobile = useMediaQuery({ query: '(min-width: 360px)' });
   return (
-    <div className="mb-4 bg-cadet-blue rounded text-gray-100 p-2">
-      <div className=" flex justify-between items-center mb-2 ">
+    <div className="mb-4 rounded  ">
+      <div className=" flex py-2 justify-between items-center  ">
         <h1 className="sub__titles ">Our Products</h1>
         <span>See all</span>
       </div>
@@ -28,18 +28,23 @@ export default function Slides({ data, settings }) {
         naturalSlideWidth={400}
         naturalSlideHeight={400}
         totalSlides={data.length}
-        visibleSlides={isDesktop ? 5 : isTablet ? 4 : isMobile ? 3 : 1}
+        visibleSlides={isDesktop ? 5 : isTablet ? 4 : isMobile ? 2 : 1}
         isIntrinsicHeight={true}
         lockOnWindowScroll={true}
         className="relative "
       >
-        <Slider className="px-4 overflow-hidden">
+        <Slider className="px-0 overflow-hidden">
           {data.map((photo, i) => {
             return (
-              <Slide key={i} innerClassName="px-4 ">
-                <div key={photo.url} className="flex-column  cursor-pointer ">
+              <Slide key={i} innerClassName="">
+                <div
+                  key={photo.url}
+                  className="flex-column mx-1   cursor-pointer "
+                >
                   <LazyLoad>
-                    <div className={`h-${settings.height} relative`}>
+                    <div
+                      className={`h-${settings.height} relative border border-gray rounded overflow-hidden shadow-lg`}
+                    >
                       <Image
                         className="object-cover w-full mb-2 rounded pointer-events-none"
                         src={photo.url}
@@ -68,7 +73,7 @@ export default function Slides({ data, settings }) {
             );
           })}
         </Slider>
-        <ButtonBack className="category-arrow-left left-1">
+        <ButtonBack className="category-arrow-left left-1 text-gray-800">
           <FaChevronLeft className="opacity-50" />
         </ButtonBack>
         <ButtonNext className="category-arrow-right">

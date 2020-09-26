@@ -14,7 +14,7 @@ export default function Home() {
     height: '64',
   };
   const settings = {
-    height: '32',
+    height: '48',
   };
 
   return (

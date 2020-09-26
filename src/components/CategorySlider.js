@@ -17,7 +17,7 @@ export default function CategorySlider({ data }) {
   const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
   const isMobile = useMediaQuery({ query: '(min-width: 360px)' });
   return (
-    <div className=" overflow-hidden mb-4 bg-pink-400 rounded text-gray-100 p-2">
+    <div className=" overflow-hidden mb-4  rounded  p-2">
       <div className=" flex justify-between items-center mb-1 ">
         <h1 className="sub__titles ">Categories</h1>
         <span>See all</span>

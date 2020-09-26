@@ -73,7 +73,7 @@ export default function NavIcons() {
         <MdLanguage className="w-25p h-25p" />
         <div
           ref={languageDropDownRef}
-          className="transform scale-0 transition origin-top duration-200 z-20 absolute top-100 rounded bg-white text-nav-primary "
+          className="transform scale-0 transition origin-top-right duration-200 z-20 absolute top-100 right-0 rounded bg-white text-nav-primary "
         >
           <button className="p-2 w-full text-center font-cairo hover:text-nav-secondary hover:bg-nav-primary">
             العربية

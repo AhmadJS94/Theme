@@ -20484,10 +20484,7 @@ video {
   --bg-opacity: 1;
   background-color: #fff;
   background-color: rgba(255, 255, 255, var(--bg-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   --bg-opacity: 0.25;
   border-radius: 0.25rem;
   z-index: 1;
@@ -20518,10 +20515,7 @@ video {
   --transform-translate-y: -50%;
   cursor: pointer;
   border-radius: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   --bg-opacity: 1;
   background-color: #fff;
   background-color: rgba(255, 255, 255, var(--bg-opacity));
@@ -20539,8 +20533,6 @@ video {
 
 .category-arrow-left {
   position: absolute;
-  width: 1.5rem;
-  height: 4rem;
   top: 36%;
   left: 0;
   --transform-translate-x: 0;
@@ -20556,12 +20548,9 @@ video {
   --bg-opacity: 1;
   background-color: #fff;
   background-color: rgba(255, 255, 255, var(--bg-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  --bg-opacity: 0.25;
-  border-radius: 0.25rem;
+  padding: 1rem;
+  --bg-opacity: 0.5;
+  border-radius: 9999px;
   z-index: 1;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
@@ -20575,8 +20564,6 @@ video {
 
 .category-arrow-right {
   position: absolute;
-  width: 1.5rem;
-  height: 4rem;
   top: 36%;
   right: 0;
   --transform-translate-x: 0;
@@ -20589,15 +20576,12 @@ video {
   transform: translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y));
   --transform-translate-y: -50%;
   cursor: pointer;
-  border-radius: 0.25rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  border-radius: 9999px;
+  padding: 1rem;
   --bg-opacity: 1;
   background-color: #fff;
   background-color: rgba(255, 255, 255, var(--bg-opacity));
-  --bg-opacity: 0.25;
+  --bg-opacity: 0.5;
   z-index: 1;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-duration: 200ms;
@@ -20611,6 +20595,7 @@ video {
 
 .sub__titles {
   font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .category__titles {

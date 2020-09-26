@@ -31,7 +31,7 @@ export default function Navbar() {
   const isTabletOrAbove = useMediaQuery({ query: '(min-width: 768px)' });
   return (
     <>
-      <header className=" px-5 py-2 pb-0 sticky top-0 left-0 bg-nav-primary items-center z-20">
+      <header className="  shadow-xl px-5 py-2 pb-0 sticky top-0 left-0 bg-nav-primary items-center z-20">
         <div className="  flex justify-between py-2  ">
           {!isTabletOrAbove && (
             <Hamburger handleSideMenuOpen={handleSideMenuOpen} />
