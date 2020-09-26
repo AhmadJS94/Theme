@@ -4,11 +4,11 @@ import {
   Slider,
   Slide,
   // DotGroup,
-  Image,
-  ButtonBack,
-  ButtonNext,
+  //   Image,
+  //   ButtonBack,
+  //   ButtonNext,
 } from 'pure-react-carousel';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+// import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
 export default function TopDeals({ data }) {
   const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
@@ -24,7 +24,7 @@ export default function TopDeals({ data }) {
         naturalSlideWidth={400}
         naturalSlideHeight={400}
         totalSlides={data.length}
-        visibleSlides={isDesktop ? 4 : isTablet ? 4 : isMobile ? 3 : 1}
+        visibleSlides={isDesktop ? 4 : isTablet ? 4 : isMobile ? 2 : 1}
         isIntrinsicHeight={true}
         // hasMasterSpinner={true}
         lockOnWindowScroll={true}

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Logo from './NavComponents/Logo';
 import NavRightSide from './NavComponents/NavRightSide';
 import { useMediaQuery } from 'react-responsive';
-import { BiMenuAltLeft } from 'react-icons/bi';
+// import { BiMenuAltLeft } from 'react-icons/bi';
 import NavSearchbar from './NavComponents/NavSearchbar';
 import SecondaryNav from './NavComponents/SecondaryNav';
 import useClickAway from '../hooks/useClickAway';

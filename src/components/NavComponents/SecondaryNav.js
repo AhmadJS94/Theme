@@ -1,6 +1,6 @@
 import React from 'react';
 import NavCategories from './NavCategories';
-import NavIcons from './NavIcons';
+// import NavIcons from './NavIcons';
 import { useMediaQuery } from 'react-responsive';
 import NavSearchbar from './NavSearchbar';
 export default function SecondaryNav() {
