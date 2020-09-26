@@ -1,13 +1,11 @@
 import React from 'react';
 
-// import { DataProvider } from '../contexts/DataContext';
 import { useMediaQuery } from 'react-responsive';
 
 import {
   CarouselProvider,
   Slider,
   Slide,
-  // DotGroup,
   Image,
   ButtonBack,
   ButtonNext,
@@ -32,12 +30,10 @@ export default function Slides({ data, settings }) {
         totalSlides={data.length}
         visibleSlides={isDesktop ? 5 : isTablet ? 4 : isMobile ? 3 : 1}
         isIntrinsicHeight={true}
-        // hasMasterSpinner={true}
         lockOnWindowScroll={true}
         className="relative "
       >
         <Slider className="px-4 overflow-hidden">
-          {/* <img className="w-full h-full" src={item.url} alt="nothing" /> */}
           {data.map((photo, i) => {
             return (
               <Slide key={i} innerClassName="px-4 ">
@@ -45,7 +41,6 @@ export default function Slides({ data, settings }) {
                   <LazyLoad>
                     <div className={`h-${settings.height} relative`}>
                       <Image
-                        // style={{ pointerEvents: 'none' }}
                         className="object-cover w-full mb-2 rounded pointer-events-none"
                         src={photo.url}
                         alt="me"
@@ -79,8 +74,6 @@ export default function Slides({ data, settings }) {
         <ButtonNext className="category-arrow-right">
           <FaChevronRight className="opacity-50" />
         </ButtonNext>
-
-        {/* <DotGroup /> */}
       </CarouselProvider>
     </div>
   );

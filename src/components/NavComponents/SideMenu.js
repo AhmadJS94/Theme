@@ -1,11 +1,9 @@
 import React from 'react';
-// import { BiMenuAltLeft } from 'react-icons/bi';
 import Hamburger from './Hamburger';
 import Logo from './Logo';
 
 export default function SideMenu({
   sideMenuRef,
-  sideMenuOpen,
 
   handleSideMenuClose,
 }) {

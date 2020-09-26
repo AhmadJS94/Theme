@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  // DotGroup,
-  //   Image,
-  //   ButtonBack,
-  //   ButtonNext,
-} from 'pure-react-carousel';
-// import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import { useMediaQuery } from 'react-responsive';
 export default function TopDeals({ data }) {
   const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
@@ -26,7 +17,6 @@ export default function TopDeals({ data }) {
         totalSlides={data.length}
         visibleSlides={isDesktop ? 4 : isTablet ? 4 : isMobile ? 2 : 1}
         isIntrinsicHeight={true}
-        // hasMasterSpinner={true}
         lockOnWindowScroll={true}
         className="relative "
       >
@@ -37,11 +27,9 @@ export default function TopDeals({ data }) {
                 <div key={photo.url} className="flex-column  cursor-pointer ">
                   <div className={`relative`}>
                     <img
-                      // style={{ pointerEvents: 'none' }}
                       className="object-cover w-full mb-2 rounded pointer-events-none"
                       src={photo.url}
                       alt="me"
-                      hasMasterSpinner
                     />
                   </div>
                 </div>

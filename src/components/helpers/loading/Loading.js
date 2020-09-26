@@ -3,7 +3,6 @@ import React from 'react';
 export default function Loading({ color }) {
   return (
     <div className="height-100 loading">
-      {/* <img src={eclipse} className="loading__icon" /> */}
       <div className="loading__icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"

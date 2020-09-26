@@ -1,6 +1,5 @@
 import React from 'react';
 import NavCategories from './NavCategories';
-// import NavIcons from './NavIcons';
 import { useMediaQuery } from 'react-responsive';
 import NavSearchbar from './NavSearchbar';
 export default function SecondaryNav() {
@@ -9,7 +8,6 @@ export default function SecondaryNav() {
     <div className="flex py-2">
       {isTabletOrAbove && <NavCategories />}
       {!isTabletOrAbove && <NavSearchbar />}
-      {/* {isTabletOrAbove && <NavIcons />} */}
     </div>
   );
 }

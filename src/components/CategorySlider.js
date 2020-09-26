@@ -6,8 +6,6 @@ import {
   CarouselProvider,
   Slider,
   Slide,
-  // DotGroup,
-  // Image,
   ButtonBack,
   ButtonNext,
 } from 'pure-react-carousel';
@@ -31,7 +29,6 @@ export default function CategorySlider({ data }) {
         totalSlides={data.length}
         visibleSlides={isDesktop ? 7 : isTablet ? 5 : isMobile ? 3 : 1}
         isIntrinsicHeight={true}
-        // hasMasterSpinner={true}
         lockOnWindowScroll={true}
         className="relative "
       >
@@ -46,10 +43,8 @@ export default function CategorySlider({ data }) {
                   <div className="grid place-items-center p-1">
                     <img
                       className="object-cover rounded-full pointer-events-none w-20 h-20 border-white border"
-                      // style={{ width: '90px', height: '90px' }}
                       src={photo.url}
                       alt="me"
-                      // hasMasterSpinner
                     />
                   </div>
 
@@ -65,8 +60,6 @@ export default function CategorySlider({ data }) {
         <ButtonNext className="category-arrow-right">
           <FaChevronRight className="opacity-50" />
         </ButtonNext>
-
-        {/* <DotGroup /> */}
       </CarouselProvider>
     </div>
   );

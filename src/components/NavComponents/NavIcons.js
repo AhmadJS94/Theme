@@ -40,8 +40,6 @@ export default function NavIcons() {
         ref={userIconRef}
         className="relative p-1 cursor-pointer grid place-items-center "
         onClick={handleUserIconClick}
-
-        // onMouseLeave={handleUserIconOut}
       >
         <FaUser
           className=""
@@ -74,7 +72,6 @@ export default function NavIcons() {
       >
         <MdLanguage className="w-25p h-25p" />
         <div
-          // id="languagedropdown"
           ref={languageDropDownRef}
           className="transform scale-0 transition origin-top duration-200 z-20 absolute top-100 rounded bg-white text-nav-primary "
         >

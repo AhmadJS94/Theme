@@ -5,10 +5,7 @@ export default function NavSearchbar() {
   return (
     <div className="flex flex-grow   relative bg-white  rounded-lg  ">
       <div className="grid items-center p-1 text-orange-500 ">
-        <BiSearch
-          className=" w-5 h-5"
-          // style={{ width: '50px', height: '50px' }}
-        />
+        <BiSearch className=" w-5 h-5" />
       </div>
       <input
         className=" pr-1 flex-grow  text-nav-primary font-semibold placeholder-nav-primary "
