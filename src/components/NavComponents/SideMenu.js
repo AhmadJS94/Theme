@@ -1,5 +1,5 @@
 import React from 'react';
-import { BiMenuAltLeft } from 'react-icons/bi';
+// import { BiMenuAltLeft } from 'react-icons/bi';
 import Hamburger from './Hamburger';
 import Logo from './Logo';
 
