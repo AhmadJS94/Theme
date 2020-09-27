@@ -2,17 +2,20 @@ import React, { useRef, useState } from 'react';
 import { TiShoppingCart } from 'react-icons/ti';
 import { FaUser } from 'react-icons/fa';
 import { MdLanguage } from 'react-icons/md';
+import { BiSearch } from 'react-icons/bi';
+
 import useClickAway from '../../hooks/useClickAway';
 
-export default function NavIcons() {
+export default function NavIcons({ isMobile = false }) {
   const userIconRef = useRef(null);
-
+  const searchBarRef = useRef(null);
   const userDropDownRef = useRef(null);
   const languageDropDownRef = useRef(null);
   const [userDropDownMenuOpen, setUserDropDownMenuOpen] = useState(false);
   const [languageDropDownMenuOpen, setLanguageDropDownMenuOpen] = useState(
     false
   );
+  const [searchBarOpen, setSearchBarOpen] = useState(false);
   useClickAway(userDropDownRef, () => {
     if (userDropDownMenuOpen) {
       userDropDownRef.current.classList.replace('scale-100', 'scale-0');
@@ -34,31 +37,59 @@ export default function NavIcons() {
     setLanguageDropDownMenuOpen(true);
     languageDropDownRef.current.classList.replace('scale-0', 'scale-100');
   };
+  const handleSearchBarOpen = () => {
+    setSearchBarOpen(!searchBarOpen);
+    // searchBarRef.current.classList.replace('hidden', 'block');
+    // searchBarRef.current.classList.remove('-translate-y-full');
+    // }
+  };
   return (
     <div className="flex ml-5  ">
-      <div
-        ref={userIconRef}
-        className="relative p-1 cursor-pointer grid place-items-center "
-        onClick={handleUserIconClick}
-      >
-        <FaUser
-          className=""
-          style={{ height: '20px', width: '20px', color: 'white' }}
-        />
-        <div
-          id="userdropdown"
-          ref={userDropDownRef}
-          className="scale-0   transform z-20 transition duration-200 origin-top rounded absolute top-100  bg-white text-nav-primary   "
+      {!isMobile && (
+        <button
+          ref={userIconRef}
+          className="relative p-1 cursor-pointer grid place-items-center "
+          onClick={handleUserIconClick}
         >
-          <button className="p-2 w-full  text-center hover:text-nav-secondary hover:bg-nav-primary ">
-            Login
-          </button>
-          <button className="p-2  text-center  hover:text-nav-secondary hover:bg-nav-primary">
-            Register
+          <FaUser className="w-20p h-20p text-white" />
+          <div
+            id="userdropdown"
+            ref={userDropDownRef}
+            className="scale-0   transform z-20 transition duration-200 origin-top rounded absolute top-100  bg-white text-nav-primary   "
+          >
+            <button className="p-2 w-full  text-center hover:text-nav-secondary hover:bg-nav-primary ">
+              Login
+            </button>
+            <button className="p-2  text-center  hover:text-nav-secondary hover:bg-nav-primary">
+              Register
+            </button>
+          </div>
+        </button>
+      )}
+
+      {isMobile && (
+        <button
+          onClick={handleSearchBarOpen}
+          className="py-0 px-1 grid place-items-center "
+        >
+          <BiSearch className="w-25p h-25p text-white"></BiSearch>
+        </button>
+      )}
+      {searchBarOpen && (
+        <div className="absolute p-1 flex items-center opacity-0 animate-fadeIn top-100 min-w-full bg-white  left-0">
+          <BiSearch className="w-20p h-20p    text-nav-primary"></BiSearch>
+          <input
+            ref={searchBarRef}
+            type="search"
+            className="py-1 px-4 flex-grow  placeholder-black "
+            placeholder="Search..."
+            autoFocus={true}
+          />
+          <button className="p-1 bg-nav-primary rounded text-white">
+            Search
           </button>
         </div>
-        <span className="absolute right-n1 top-10 h-5 w-1p bg-white rounded-full" />
-      </div>
+      )}
 
       <button className="p-1 outline-none grid place-items-center text-nav-secondary relative">
         <TiShoppingCart className="w-25p h-25p" />

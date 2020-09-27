@@ -48,7 +48,7 @@ export default function Slides({ data, settings }) {
                       className={`h-${settings.height} relative border border-gray rounded overflow-hidden shadow-lg`}
                     >
                       <Image
-                        className="object-cover w-full mb-2 rounded pointer-events-none"
+                        className="object-cover w-full mb-4 rounded pointer-events-none"
                         src={photo.url}
                         alt="me"
                         hasMasterSpinner
@@ -64,10 +64,13 @@ export default function Slides({ data, settings }) {
                       </p>
                       <p className="mb-0">
                         <span className="text-base font-medium">
-                          {photo.price}{' '}
+                          {photo.price}
                         </span>
                         <span className="text-xs font-light">KD</span>
                       </p>
+                      <button className="p-2 w-full rounded bg-nav-primary">
+                        Add to cart
+                      </button>
                     </div>
                   </LazyLoad>
                 </div>

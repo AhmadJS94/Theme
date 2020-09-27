@@ -20373,6 +20373,16 @@ video {
   }
 }
 
+@keyframes fadeIn{
+  0%{
+    opacity: 0%;
+  }
+
+  100%{
+    opacity: 100%;
+  }
+}
+
 .animate-none{
   animation: none;
 }
@@ -20391,6 +20401,10 @@ video {
 
 .animate-bounce{
   animation: bounce 1s infinite;
+}
+
+.animate-fadeIn{
+  animation: fadeIn 200ms ease-in forwards ;
 }
 
 .text-shadow{
@@ -40422,6 +40436,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .sm\:animate-fadeIn{
+    animation: fadeIn 200ms ease-in forwards ;
+  }
+
   .sm\:text-shadow{
     text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
   }
@@ -60275,6 +60293,10 @@ video {
 
   .md\:animate-bounce{
     animation: bounce 1s infinite;
+  }
+
+  .md\:animate-fadeIn{
+    animation: fadeIn 200ms ease-in forwards ;
   }
 
   .md\:text-shadow{
@@ -80132,6 +80154,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .lg\:animate-fadeIn{
+    animation: fadeIn 200ms ease-in forwards ;
+  }
+
   .lg\:text-shadow{
     text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
   }
@@ -99987,6 +100013,10 @@ video {
     animation: bounce 1s infinite;
   }
 
+  .xl\:animate-fadeIn{
+    animation: fadeIn 200ms ease-in forwards ;
+  }
+
   .xl\:text-shadow{
     text-shadow: 0px 0px 1px rgb(0 0 0 / 20%), 0px 0px 1px rgb(1 0 5 / 10%);
   }
@@ -119840,6 +119870,10 @@ video {
 
   .xs\:animate-bounce{
     animation: bounce 1s infinite;
+  }
+
+  .xs\:animate-fadeIn{
+    animation: fadeIn 200ms ease-in forwards ;
   }
 
   .xs\:text-shadow{

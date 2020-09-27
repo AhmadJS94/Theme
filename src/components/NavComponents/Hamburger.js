@@ -8,7 +8,7 @@ export default function Hamburger({
   return (
     <button
       onClick={handleSideMenuOpen || handleSideMenuClose}
-      className="grid p-1 mr-2 flex-initial place-items-center"
+      className="grid p-0 mr-2  place-items-center"
     >
       <BiMenuAltLeft style={{ width: '25px', height: '25px', color: color }} />
     </button>

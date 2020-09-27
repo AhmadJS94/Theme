@@ -6,7 +6,7 @@ export default function TopDeals({ data }) {
   const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
   const isMobile = useMediaQuery({ query: '(min-width: 360px)' });
   return (
-    <div className="mb-4 p-2 rounded text-white bg-teal ">
+    <div className="mb-4 p-2 rounded   ">
       <div className=" flex  justify-between items-center mb-2 ">
         <h1 className="sub__titles ">Top Online Deals</h1>
         <span>See all</span>
